@@ -1,9 +1,9 @@
 // import
 const express =require("express")
 const mongoose = require("mongoose")
-const morgan = require("morgna")
+const morgan = require("morgan")
 const cors = require("cors")
-require("dovenv").config() 
+require("dotenv").config() 
 
 
 // app
