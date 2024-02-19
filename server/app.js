@@ -2,8 +2,8 @@
 const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
-const mysql = require("mysql")
-const dotenv = require("dotenv")
+const mysql = require("mysql2")
+const dotenvenv = require("dotenv")
 require("dotenv").config()
 const PORT = process.env.PORT || 8080
 
@@ -17,7 +17,7 @@ const connection = mysql.createConnection({
     host: process.env.HOST,
     user:process.env.USER,
     password:process.env.PASSWORD,
-    port:process.env.PORT,
+    port:process.env.DB_PORT,
     database:process.env.DATABASE,
 })
 
