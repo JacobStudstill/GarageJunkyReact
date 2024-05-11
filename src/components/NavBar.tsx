@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function NavBar() {
     return (
@@ -31,10 +31,10 @@ export default function NavBar() {
                                 <ul className="dropdown-menu dropdown-menu-end">
                                     <li><a className="dropdown-item" href="login">Login / Sign up</a></li>
                                     <li><hr className="dropdown-divider"/></li>
-                                    <li><a className="dropdown-item" href="#">Profile</a></li>
-                                    <li><a className="dropdown-item" href="#">Account</a></li>
+                                    <li><a className="dropdown-item" href="profile">Profile</a></li>
+                                    <li><a className="dropdown-item" href="account">Account</a></li>
                                     <li><hr className="dropdown-divider"/></li>
-                                    <li><a className="dropdown-item" href="#">Settings</a></li>
+                                    <li><a className="dropdown-item" href="settings">Settings</a></li>
                                 </ul>
                                 </li>
                     </div>
