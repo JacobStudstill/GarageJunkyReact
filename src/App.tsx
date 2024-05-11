@@ -8,9 +8,17 @@ import Sell from './pages/Sell'
 import Account from './pages/Account'
 import Profile from './pages/Profile'
 import Settings from './pages/Settings'
+import db from './firebase'
+import { useEffect } from 'react'
+import { onSnapshot, collection } from 'firebase/firestore'
 
 export default function App() {
-
+  useEffect(()=>{
+    const unsub = onSnapshot(collection(db, "items"),(snapshot) => {
+      console.log(snapshot.docs.map(doc => doc.data()))
+    });
+    return unsub
+  },[]);
   return (
     <BrowserRouter>
       <Routes>
